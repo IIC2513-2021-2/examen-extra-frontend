@@ -146,6 +146,68 @@ ul {
   padding: 10px 0;
 }
 
+.expedition-main {
+  display: flex;
+}
+
+.expedition-main section {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 50px 25px 0;
+}
+
+.expedition-main section h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0 0;
+}
+
+.expedition-main section p {
+  font-size: 1.2rem;
+}
+
+.expedition-main section span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 10px 0;
+}
+
+.expedition-main img {
+  width: 40%;
+  height: auto;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid #DDD;
+  position: relative;
+}
+
+.member-card h2, .member-card p {
+  margin: 0;
+  padding: 10px;
+}
+
+.member-card span {
+  padding: 0 10px;
+}
+
+.member-card img {
+  width: 100%;
+  height: auto;
+  order: -1;
+}
+
+.member-card .role {
+  position: absolute;
+  color: #FFFFFF;
+  background-color: #007bff;
+  padding: 10px 15px;
+  right: 0;
+  top: 0;
+}
+
 @media screen and (min-width: 501px) {
   .app-header h1 {
     font-size: 1.2rem;
