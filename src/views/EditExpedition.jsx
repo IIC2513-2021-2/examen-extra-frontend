@@ -2,6 +2,11 @@ import React from 'react';
 
 export default function EditExpedition() {
   return (
-    <h1>Edit Expedition</h1>
+    <div>
+      <h1>Edit Expedition</h1>
+      <form>
+        <input type="text" placeholder="Change me" />
+      </form>
+    </div>
   );
 }
