@@ -11,3 +11,113 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+  background-color: #263137;
+  color: white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+.app-header .container {
+  display: flex;
+  align-items: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.app-header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 20px 0 20px 40px;
+}
+
+.app-header ul li {
+  padding-right: 10px;
+}
+
+.app-header a {
+  text-decoration: none;
+  color: white;
+}
+
+.app-header a:hover {
+  text-decoration: underline;
+}
+
+.app-header ul li:first-child {
+  font-size: 0.8rem;
+}
+
+.app-header ul li:last-child {
+  padding-right: 0;
+}
+
+.app-header .brand > div {
+  display: flex;
+  align-items: center;
+}
+
+.app-header .brand svg {
+  font-size: 1.5rem;
+  padding-right: 10px;
+}
+
+.actions {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.actions button {
+  padding: 5px 20px;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  padding: 15px 50px;
+  border: none;
+  background-color: #333;
+  color: white;
+  line-height: 1.5;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.loading {
+  animation: fa-spin 1.5s linear infinite;
+}
+
+.loading-sm {
+  font-size: 2rem;
+}
+
+.loading-lg {
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 501px) {
+  .app-header h1 {
+    font-size: 1.2rem;
+  }
+
+  .app-header ul li:first-child {
+    font-size: 1rem;
+  }
+}
