@@ -95,6 +95,13 @@ ul {
   text-decoration: none;
 }
 
+/* Credits to Bootstrap: https://getbootstrap.com/docs/4.0/components/alerts/ */
+.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
 .loading {
   animation: fa-spin 1.5s linear infinite;
 }
