@@ -1,11 +1,5 @@
 import React from 'react';
 
-function createMarkup(markup) {
-  return {
-    __html: markup,
-  };
-}
-
 export default function MemberCard({ member }) {
   return (
     <article className="member-card">
@@ -13,7 +7,7 @@ export default function MemberCard({ member }) {
       <span>
         <strong>{member.agency}</strong>
       </span>
-      <p dangerouslySetInnerHTML={createMarkup(member.bio)} />
+      <p>{member.bio}</p> {/* Fix de seguridad */}
       <img src={member.photo} alt={member.name} />
       <span className="role">{member.role}</span>
     </article>

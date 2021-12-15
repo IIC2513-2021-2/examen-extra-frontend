@@ -7,12 +7,6 @@ import { Deserializer } from 'jsonapi-serializer';
 import config from '../config';
 import Loading from '../components/Loading';
 
-function createMarkup(markup) {
-  return {
-    __html: markup,
-  };
-}
-
 export default function ExpeditionDetail() {
   const { id } = useParams();
 
@@ -40,7 +34,7 @@ export default function ExpeditionDetail() {
   }
 
   if (error) {
-    return <p>There was an error loading the expedition data</p>
+    return <p>There was an error loading the expedition data</p>;
   }
 
   return (
@@ -50,7 +44,7 @@ export default function ExpeditionDetail() {
           <h1>{expedition?.name}</h1>
           <span>Start on {expedition && format(parseISO(expedition.startDate), 'PPP')}</span>
           <span>{expedition?.endDate ? `End on ${format(parseISO(expedition.endDate), 'PPP')}` : 'Current mission'}</span>
-          <p dangerouslySetInnerHTML={createMarkup(expedition?.description)} />
+          <p>{expedition?.description}</p> {/* Fix de seguridad */}
         </section>
         <img alt={expedition?.name} src={expedition?.patch} />
       </div>
