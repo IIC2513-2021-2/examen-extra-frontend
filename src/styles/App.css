@@ -58,3 +58,17 @@
   font-size: 1.2rem;
   text-align: center;
 }
+
+.expedition-secondary .loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.members-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 80px;
+  padding: 30px 0;
+}

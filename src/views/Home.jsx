@@ -7,7 +7,7 @@ export default function Home() {
       <div className="initial-box">
         <h1>The International Space Station (ISS)</h1>
         <div className="nested-box">
-          <p class="paragraph">
+          <p className="paragraph">
             The International Space Station (ISS) is a space station, or a habitable artificial satellite, in low Earth orbit.
           </p>
           <Link className="btn" to="/expeditions">Explore the expeditions</Link>

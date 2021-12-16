@@ -3,8 +3,9 @@ import { useParams } from 'react-router-dom';
 import format from 'date-fns/format';
 import parseISO from 'date-fns/parseISO';
 import { Deserializer } from 'jsonapi-serializer';
-// import MemberCard from '../components/MemberCard';
+import MemberCard from '../components/MemberCard';
 import issPhoto from '../assets/iss.jpg'; // Source: https://www.flickr.com/photos/nasa2explore/51712323479
+import api from '../api';
 import config from '../config';
 import Loading from '../components/Loading';
 
@@ -14,6 +15,8 @@ export default function ExpeditionDetail() {
   const [expedition, setExpedition] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [members, setMembers] = useState([]);
+  const [loadingMembers, setLoadingMembers] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -29,6 +32,19 @@ export default function ExpeditionDetail() {
       .catch(() => setError(true))
       .finally(() => setLoading(false));
   }, [id]);
+
+  useEffect(() => {
+    if (expedition) {
+      setLoadingMembers(true);
+      api.getExpeditionMembers(id)
+        .then((data) => (
+          new Deserializer({ keyForAttribute: 'camelCase' })
+            .deserialize(data, (_error, memberList) => setMembers(memberList))
+        ))
+        .catch(() => setError(true))
+        .finally(() => setLoadingMembers(false));
+    }
+  }, [expedition, id]);
 
   if (loading) {
     return <Loading />;
@@ -52,7 +68,17 @@ export default function ExpeditionDetail() {
 
       <section className="expedition-secondary">
         <h2>Members</h2>
-        <Loading />
+        {loadingMembers ? (
+          <div className="loading-container">
+            <Loading />
+          </div>
+        ) : (
+          <div className="members-list">
+            {members.map((member) => (
+              <MemberCard key={member.id} member={member} />
+            ))}
+          </div>
+        )}
       </section>
     </>
   );

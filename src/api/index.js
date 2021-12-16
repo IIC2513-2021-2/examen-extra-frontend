@@ -16,8 +16,14 @@ function getExpeditions() {
   return getResource(`${config.API_URL}/api/expeditions`);
 }
 
+function getExpeditionMembers(id) {
+  return getResource(`${config.API_URL}/api/expeditions/${id}/members`);
+}
+
+
 const api = {
   getExpeditions,
+  getExpeditionMembers,
 }
 
 export default api;
