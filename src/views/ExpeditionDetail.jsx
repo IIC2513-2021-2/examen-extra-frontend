@@ -4,6 +4,7 @@ import format from 'date-fns/format';
 import parseISO from 'date-fns/parseISO';
 import { Deserializer } from 'jsonapi-serializer';
 // import MemberCard from '../components/MemberCard';
+import issPhoto from '../assets/iss.jpg'; // Source: https://www.flickr.com/photos/nasa2explore/51712323479
 import config from '../config';
 import Loading from '../components/Loading';
 
@@ -46,7 +47,7 @@ export default function ExpeditionDetail() {
           <span>{expedition?.endDate ? `End on ${format(parseISO(expedition.endDate), 'PPP')}` : 'Current mission'}</span>
           <p>{expedition?.description}</p> {/* Fix de seguridad */}
         </section>
-        <img alt={expedition?.name} src={expedition?.patch} />
+        <img alt={expedition?.name} src={expedition?.patch || issPhoto} />
       </div>
 
       <section className="expedition-secondary">

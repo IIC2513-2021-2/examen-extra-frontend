@@ -1,0 +1,60 @@
+.loading-lg {
+  font-size: 4rem;
+}
+
+.expeditions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.expeditions-container h1 {
+  font-size: 2.5rem;
+}
+
+.expeditions-container svg {
+  height: 60vh;
+}
+
+.expeditions-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 80px;
+  padding: 30px 0;
+}
+
+.expedition-card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.expedition-card .img-container {
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.expedition-card img {
+  width: 100%;
+}
+
+.expedition-card .expedition-summary {
+  padding: 0 20px;
+}
+
+.expedition-card h2 {
+  font-size: 1.8rem;
+}
+
+.expedition-card span {
+  display: inline-block;
+  font-size: 1.2rem;
+  padding-bottom: 30px;
+}
+
+.expedition-card .btn {
+  border-radius: 0;
+  padding: 20px 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
