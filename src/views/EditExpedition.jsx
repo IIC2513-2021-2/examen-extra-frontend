@@ -99,7 +99,7 @@ export default function EditExpedition() {
 
                 <div className="field">
                   <label htmlFor="patch">Patch</label>
-                  <Field name="patch" type="text" placeholder="Patch" />
+                  <Field name="patch" type="text" placeholder="Patch URL" />
                 </div>
 
                 <div className="field">

@@ -44,8 +44,13 @@ function updateExpedition(id, payload) {
   return alterResource(`${config.API_URL}/api/expeditions/${id}`, payload, { method: 'PATCH' });
 }
 
+function addMemberToExpedition(id, payload) {
+  return alterResource(`${config.API_URL}/api/expeditions/${id}/members`, payload, { method: 'POST' });
+}
+
 
 const api = {
+  addMemberToExpedition,
   getExpeditions,
   getExpeditionDetail,
   getExpeditionMembers,

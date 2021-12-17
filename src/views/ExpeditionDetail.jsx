@@ -70,7 +70,10 @@ export default function ExpeditionDetail() {
       </div>
 
       <section className="expedition-secondary">
-        <h2>Members</h2>
+        <h2>
+          Members
+          <Link className="btn" to={`/expeditions/${expedition?.id}/members/new`}>New member</Link>
+        </h2>
         {loadingMembers ? (
           <div className="loading-container">
             <Loading />
