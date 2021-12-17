@@ -166,6 +166,7 @@ ul {
 .expedition-main section h1 {
   font-size: 2.5rem;
   margin: 0.5rem 0 0;
+  display: flex;
 }
 
 .expedition-main section p {
@@ -181,6 +182,10 @@ ul {
 .expedition-main img {
   width: 40%;
   height: auto;
+}
+
+.expedition-main .btn {
+  margin-left: 20px;
 }
 
 .member-card {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import format from 'date-fns/format';
 import parseISO from 'date-fns/parseISO';
 import { Deserializer } from 'jsonapi-serializer';
@@ -58,7 +58,10 @@ export default function ExpeditionDetail() {
     <>
       <div className="expedition-main">
         <section>
-          <h1>{expedition?.name}</h1>
+          <h1>
+            {expedition?.name}
+            <Link className="btn" to={`/expeditions/${expedition?.id}/edit`}>Edit</Link>
+          </h1>
           <span>Start on {expedition && format(parseISO(expedition.startDate), 'PPP')}</span>
           <span>{expedition?.endDate ? `End on ${format(parseISO(expedition.endDate), 'PPP')}` : 'Current mission'}</span>
           <p>{expedition?.description}</p> {/* Fix de seguridad */}
