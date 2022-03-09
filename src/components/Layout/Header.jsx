@@ -18,6 +18,9 @@ function Header() {
             <li>
               <Link to="/theory">Theory</Link>
             </li>
+            <li>
+              <Link to="/theory-extra">Theory Extra</Link>
+            </li>
           </ul>
         </nav>    
       </div>  
