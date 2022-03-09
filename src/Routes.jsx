@@ -5,6 +5,7 @@ import EditExpedition from './views/EditExpedition';
 import ExpeditionDetail from './views/ExpeditionDetail';
 import Expeditions from './views/Expeditions';
 import Home from './views/Home';
+import Login from './views/Login';
 import NewMember from './views/NewMember';
 import NotFound from './views/NotFound';
 import Theory from './views/Theory';
@@ -15,6 +16,7 @@ export default function AppRoutes() {
       <Routes>
         <Route index element={<Home />} />
         <Route path="theory" element={<Theory />} />
+        <Route path="login" element={<Login />} />
         <Route path="expeditions" element={<Expeditions />} />
         <Route path="expeditions/:id" element={<ExpeditionDetail />} />
         <Route path="expeditions/:id/edit" element={<EditExpedition />} />

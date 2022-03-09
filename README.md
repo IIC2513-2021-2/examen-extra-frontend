@@ -32,7 +32,7 @@ console.log(config.API_URL);
 
 ## Probar aplicación
 
-Para verificar que todo está bien debe abrir [http://localhost:8000](http://localhost:800) para ver el resultado en el browser. Debiese ver el home de la SPA, con una foto de la ISS.
+Para verificar que todo está bien debe abrir [http://localhost:8000](http://localhost:8000) para ver el resultado en el browser. Debiese ver el home de la SPA, con una foto de la ISS.
 
 ¡Listo! Ya está de condiciones de correr una single page application en el browser para desarrollar el examen.
 
